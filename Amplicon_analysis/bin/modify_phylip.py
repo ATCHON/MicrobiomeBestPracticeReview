@@ -1,5 +1,5 @@
-from Bio import SeqIO        
-import re            
+from Bio import SeqIO
+import re
 import argparse
 
 parser = argparse.ArgumentParser()
@@ -21,6 +21,6 @@ for seq in fasta:
 
 newfasta_name = str(fasta_file)
 nu = newfasta_name.find('fasta')
-_new_fastafile = newfasta_name[0:nu] + 'otu_modified.fasta'
+_new_fastafile = newfasta_name[:nu] + 'otu_modified.fasta'
 #print (self._new_fastafile)
 SeqIO.write(sequences=new_names, format='fasta', handle=_new_fastafile)  
